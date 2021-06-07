@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+
+  <macro name="shw_sector001to002" class="highway">
+    <component ref="standardsechighway" />
+    <connections>
+      <connection ref="entrypoint">
+        <offset>
+          <position x="0" y="50000" z="-50000" /> <!-- This should match the first spline -->
+        </offset>
+      </connection>
+      <connection ref="exitpoint">
+        <offset>
+          <position x="-9.8766610E+07" y="200000" z="1.34273100E+08" /> <!-- This should match the last spline -->
+        </offset>
+      </connection>
+    </connections>
+    <properties>
+      <boundaries>
+        <boundary class="splinetube">
+          <splineposition x="0" y="50000" z="-50000" tx="0" ty="0" tz="1" inlength="0" outlength="0" weight="1" />
+          <splineposition x="-9.8766610E+07" y="200000" z="1.34273100E+08" tx="0" ty="0" tz="1" inlength="0" outlength="0" weight="0" />
+          <size r="1000" />
+        </boundary>
+      </boundaries>
+      <controls>
+        <linear>
+          <time min="6" max="12" /> <!-- In seconds, min sets how fast ships can traverse the entire path, and max sets how slow -->
+        </linear>
+        <angular>
+          <roll />
+        </angular>
+      </controls>
+    </properties>
+  </macro>
+  <macro name="shw_sector002to001" class="highway">
+    <component ref="standardsechighway" />
+    <connections>
+      <connection ref="entrypoint">
+        <offset>
+          <position x="-9.8766610E+07" y="200000" z="1.34373100E+08" /> <!-- The z here is 100000 higher than the exit of the other path, which must be matched in the sectors offset for shw_sector002to001_gatezone_entry_connection -->
+        </offset>
+      </connection>
+      <connection ref="exitpoint">
+        <offset>
+          <position x="0" y="50000" z="50000" />
+        </offset>
+      </connection>
+    </connections>
+    <properties>
+      <boundaries>
+        <boundary class="splinetube"> <!-- Path below creates a loop around planet -->
+          <splineposition x="-9.8766610E+07" y="200000" z="1.34373100E+08" tx="0" ty="0" tz="1" inlength="0" outlength="0" weight="1" />
+          <splineposition x="-0.86E+08" y="200000" z="1.46139710E+08" tx="1" ty="0" tz="0" inlength="0" outlength="0" weight="0.8" /> <!-- x is the center x of the planet and z is center z + a buffer -->
+          <splineposition x="-7.4233390E+07" y="200000" z="1.34373100E+08" tx="0" ty="0" tz="-1" inlength="0" outlength="0" weight="0.6" /> <!-- z is the center z of the planet and x is center x + a buffer -->
+          <splineposition x="0" y="50000" z="50000" tx="0" ty="0" tz="-1" inlength="0" outlength="0" weight="0" />
+          <size r="1000" />
+        </boundary>
+      </boundaries>
+      <controls>
+        <linear>
+          <time min="6" max="12" />
+        </linear>
+        <angular>
+          <roll />
+        </angular>
+      </controls>
+    </properties>
+  </macro>
+
+
+  <macro name="shw_sector001to003" class="highway">
+    <component ref="standardsechighway" />
+    <connections>
+      <connection ref="entrypoint">
+        <offset>
+          <position x="0" y="10000" z="-50000" />
+        </offset>
+      </connection>
+      <connection ref="exitpoint">
+        <offset>
+          <position x="-2.5084710E+07" y="0.235014E+07" z="-6063404" />
+        </offset>
+      </connection>
+    </connections>
+    <properties>
+      <boundaries>
+        <boundary class="splinetube">
+          <splineposition x="0" y="10000" z="-50000" tx="-1" ty="0" tz="0" inlength="0" outlength="0" weight="3" />
+          <splineposition x="-2.5084710E+07" y="0.235014E+07" z="-6063404" tx="-1" ty="0" tz="0" inlength="0" outlength="0" weight="0" />
+          <size r="1000" />
+        </boundary>
+      </boundaries>
+      <controls>
+        <linear>
+          <time min="6" max="12" />
+        </linear>
+        <angular>
+          <roll />
+        </angular>
+      </controls>
+    </properties>
+  </macro>
+  <macro name="shw_sector003to001" class="highway">
+    <component ref="standardsechighway" />
+    <connections>
+      <connection ref="entrypoint">
+        <offset>
+          <position x="-2.5084710E+07" y="0.235014E+07" z="-6063404" />
+        </offset>
+      </connection>
+      <connection ref="exitpoint">
+        <offset>
+          <position x="0" y="10000" z="50000" />
+        </offset>
+      </connection>
+    </connections>
+    <properties>
+      <boundaries>
+        <boundary class="splinetube">
+          <splineposition x="-2.5184710E+07" y="0.235014E+07" z="-6063404" tx="-1" ty="0" tz="0" inlength="0" outlength="0" weight="0.6" />
+          <splineposition x="-3.5881607E+07" y="0.225014E+07" z="3863404" tx="0" ty="0" tz="1" inlength="0" outlength="0" weight="0.8" />
+          <splineposition x="-2.5184710E+07" y="0.215014E+07" z="14591941" tx="1" ty="0" tz="0" inlength="0" outlength="0" weight="1" />
+          <splineposition x="0" y="10000" z="50000" tx="1" ty="0" tz="0" inlength="0" outlength="0" weight="0" />
+          <size r="1000" />
+        </boundary>
+      </boundaries>
+      <controls>
+        <linear>
+          <time min="12" max="60" />
+        </linear>
+        <angular>
+          <roll />
+        </angular>
+      </controls>
+    </properties>
+  </macro>
+
+<!-- These are generic macros for exit and entry gates, respectively  -->
+  <macro name="shw_SHCon5_GateZone_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="SHCon5_gate" />
+    </connections>
+  </macro>
+
+  <macro name="shw_SHCon6_GateZone_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="SHCon6_gate" />
+    </connections>
+  </macro>
+
+
+</macros>

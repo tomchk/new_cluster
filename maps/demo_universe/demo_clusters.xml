@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+  <replace sel="/macros/macro[@name='demo_Cluster_40_macro']/connections/connection[@ref='content']/macro/component[@ref='Cluster_23' or @ref='Cluster_404' or @ref='Cluster_101']/@ref">cluster_c</replace>
+
+  <remove sel="//connection[@name='demo_C40S01_Region001_connection']" />
+
+  <add sel="//macro[@name='demo_Cluster_40_macro']/connections">
+
+    <connection name="Test_Region0_connection" ref="regions">
+      <offset>
+        <position x="0" y="0" z="0" />
+      </offset>
+      <macro name="Test_Region0_macro">
+        <component connection="cluster" ref="standardregion" />
+        <properties>
+          <region ref="region_spline" />
+        </properties>
+      </macro>
+    </connection>
+
+    <connection name="demo_Cluster_40_Sector002_connection" ref="sectors">
+      <offset>
+        <!-- Values below determine what offsets are needed in sectors gate connections; it's convenient to just place the sector center where the arriving path ends -->
+        <position x="-9.8766610E+07" y="200000" z="1.34273100E+08" />
+      </offset>
+      <macro ref="demo_Cluster_40_Sector002_macro" connection="cluster" />
+    </connection>
+
+
+    <connection name="demo_Cluster_40_Sector003_connection" ref="sectors">
+      <offset>
+        <position x="-2.5084710E+07" y="0.235014E+07" z="-6063404" />
+      </offset>
+      <macro ref="demo_Cluster_40_Sector003_macro" connection="cluster" />
+    </connection>
+
+
+    <connection name="shw_sector001to002_connection" ref="sechighways">
+      <macro ref="shw_sector001to002" connection="cluster">
+        <connections>
+          <connection ref="entrypoint">
+            <macro ref="shw_SHCon6_GateZone_macro" path="../../demo_Cluster_40_Sector001_connection/shw_sector001to002_gatezone_entry_connection" connection="exitpoint1" />
+          </connection>
+          <connection ref="exitpoint">
+            <macro ref="shw_SHCon5_GateZone_macro" path="../../demo_Cluster_40_Sector002_connection/shw_sector001to002_gatezone_exit_connection" connection="entrypoint1" />
+          </connection>
+        </connections>
+      </macro>
+    </connection>
+    <connection name="shw_sector002to001_connection" ref="sechighways">
+      <macro ref="shw_sector002to001" connection="cluster">
+        <connections>
+          <connection ref="entrypoint">
+            <macro ref="shw_SHCon6_GateZone_macro" path="../../demo_Cluster_40_Sector002_connection/shw_sector002to001_gatezone_entry_connection" connection="exitpoint1" />
+          </connection>
+          <connection ref="exitpoint">
+            <macro ref="shw_SHCon5_GateZone_macro" path="../../demo_Cluster_40_Sector001_connection/shw_sector002to001_gatezone_exit_connection" connection="entrypoint1" />
+          </connection>
+        </connections>
+      </macro>
+    </connection>
+
+    <connection name="shw_sector001to003_connection" ref="sechighways">
+      <macro ref="shw_sector001to003" connection="cluster">
+        <connections>
+          <connection ref="entrypoint">
+            <macro ref="shw_SHCon6_GateZone_macro" path="../../demo_Cluster_40_Sector001_connection/shw_sector001to003_gatezone_entry_connection" connection="exitpoint1" />
+          </connection>
+          <connection ref="exitpoint">
+            <macro ref="shw_SHCon5_GateZone_macro" path="../../demo_Cluster_40_Sector003_connection/shw_sector001to003_gatezone_exit_connection" connection="entrypoint1" />
+          </connection>
+        </connections>
+      </macro>
+    </connection>
+    <connection name="shw_sector003to001_connection" ref="sechighways">
+      <macro ref="shw_sector003to001" connection="cluster">
+        <connections>
+          <connection ref="entrypoint">
+            <macro ref="shw_SHCon6_GateZone_macro" path="../../demo_Cluster_40_Sector003_connection/shw_sector003to001_gatezone_entry_connection" connection="exitpoint1" />
+          </connection>
+          <connection ref="exitpoint">
+            <macro ref="shw_SHCon5_GateZone_macro" path="../../demo_Cluster_40_Sector001_connection/shw_sector003to001_gatezone_exit_connection" connection="entrypoint1" />
+          </connection>
+        </connections>
+      </macro>
+    </connection>
+
+  </add>
+
+</diff>

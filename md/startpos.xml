@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This is for preventing the demo_universe from changing position from gamestart, and it allows changing of the position without EXE restart (new game will show any saved changes -->
+<mdscript name="MOVE">
+    <cues>
+        <cue name="MOVE">
+            <delay exact="2s" />
+            <actions>
+                <warp object="player.ship" sector="player.sector">
+                    <!-- <position x="0" y="50000" z="-54000"/> -->
+                    <position x="2000" y="10000" z="-50000"/>
+                    <!-- <position x="5000" y="10000" z="-50000"/> -->
+                    <rotation yaw="-90" pitch="0"/>
+                </warp>
+            </actions>
+        </cue>
+    </cues>
+</mdscript>

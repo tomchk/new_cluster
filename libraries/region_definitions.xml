@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<regions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="region_definitions.xsd">
+  <region name="region_spline" density="0.5" rotation="0" noisescale="10000" seed="32" minnoisevalue="0" maxnoisevalue="1">
+    <boundary class="splinetube">
+      <size r="10000" />
+      <splineposition x="0" y="30000" z="-1050000" tx="-1" ty="0" tz="0" inlength="0" outlength="0" />
+      <splineposition x="-2.5184710E+07" y="0.2361140E+07" z="-6063404" tx="-1" ty="0" tz="0" inlength="0" outlength="0" />
+      <splineposition x="-3.5881607E+07" y="0.2261140E+07" z="3863404" tx="0" ty="0" tz="1" inlength="0" outlength="0" />
+      <splineposition x="-2.5184710E+07" y="0.2161140E+07" z="14591941" tx="1" ty="0" tz="0" inlength="0" outlength="0" />
+      <splineposition x="0" y="20000" z="50000" tx="1" ty="0" tz="0" inlength="0" outlength="0" />
+    </boundary>
+    <falloff>
+      <lateral>
+        <step position="0.0" value="0.0" />
+        <step position="0.05" value="1.0" />
+        <step position="0.2" value="1.3" />
+        <step position="0.5" value="1.0" />
+        <step position="0.6" value="1.6" />
+        <step position="0.8" value="1.3" />
+        <step position="0.95" value="1.0" />
+        <step position="1.0" value="0.0" />
+      </lateral>
+      <radial>
+        <step position="0.0" value="1.0" />
+        <step position="0.51" value="1.0" />
+        <step position="0.75" value="0.85" />
+        <step position="1.0" value="0.0" />
+      </radial>
+    </falloff>
+    <fields>
+      <asteroid groupref="asteroid_ice_l" densityfactor="1" rotation="0" rotationvariation="8" noisescale="5000" seed="26041984" minnoisevalue="0.0" maxnoisevalue="1" />
+      <asteroid groupref="asteroid_ice_m" densityfactor="2" rotation="0" rotationvariation="16" noisescale="5000" seed="26041984" minnoisevalue="0.75" maxnoisevalue="1" />
+      <asteroid groupref="asteroid_ice_s" densityfactor="4" rotation="0" rotationvariation="32" noisescale="5000" seed="26041984" minnoisevalue="0.65" maxnoisevalue="1" />
+      <asteroid groupref="asteroid_ice_xs" densityfactor="2" rotation="0" rotationvariation="64" noisescale="5000" seed="26041984" minnoisevalue="0.65" maxnoisevalue="1" />
+    </fields>
+    <resources>
+      <resource ware="ice" yield="low" />
+    </resources>
+  </region>
+</regions>

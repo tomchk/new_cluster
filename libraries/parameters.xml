@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+	<!-- These let ships get much closer to a planet, although not needed while inside a SHW path -->
+	<replace sel="/parameters/physics/planetcollision/@warning">1500</replace>
+	<replace sel="/parameters/physics/planetcollision/@kill">1000</replace>
+</diff>

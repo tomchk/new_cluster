@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<diff>
+	<remove sel="//lights" />
+	<add sel="//layer">
+		<lights>
+			<omni name="XU Omni01" shadow="0" r="255" g="240" b="240" range="5E+08" shadowrange="5E+08" lighteffect="1" lenseffect="none" trigger="1" intensity="0.4">
+				<lightanimations />
+				<offset>
+					<position x="5.4E+07" y="5E+07" z="-1.3E+08" />
+				</offset>
+			</omni>
+			<!-- <omni name="XU Omni02" shadow="0" r="170" g="180" b="190" range="5E+08" shadowrange="5E+08" lighteffect="1" trigger="1" intensity="0.3">
+				<lightanimations />
+				<offset>
+					<position x="204109.4" y="-9.3E+07" z="610878" />
+				</offset>
+			</omni> -->
+			<!-- <ambient name="XU Ambient01" r="130" g="109" b="109" range="1E+07" intensity="0.2">
+				<lightanimations />
+				<offset>
+					<position x="101180" y="-7.4E+07" z="3" />
+					<quaternion qx="0.7071068" qy="-0" qz="-0" qw="-0.7071068" />
+				</offset>
+			</ambient> -->
+			<ambient name="XU Ambient02" r="50" g="55" b="58" range="1E+07" intensity="0.3">
+				<lightanimations />
+				<offset>
+					<position x="5.4E+07" y="5.7E+07" z="-1.3E+08" />
+					<quaternion qx="0.7071068" qy="-0" qz="-0" qw="-0.7071068" />
+				</offset>
+			</ambient>
+		</lights>
+	</add>
+
+	<remove sel="//connections" />
+	<add sel="//component">
+		<connections>
+			<connection name="container" tags="contents" value="0" optional="0" />
+			<connection name="position" tags="position" value="1" optional="1" />
+			<connection name="space" tags="celestialbody">
+				<offset />
+			</connection>
+			<connection name="Connection02" tags="part  ">
+				<offset>
+					<position x="68359.38" y="-1.398349E+07" z="0" />
+				</offset>
+				<parts>
+					<part name="part_bg">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environments.cluster_c_bg" />
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="6.630371E+08" y="6.905373E+08" z="6.630371E+08" />
+							<center x="15.625" y="-2.750017E+07" z="0" />
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection03" tags="part nocollision  ">
+				<offset>
+					<position x="68359.38" y="-1.398349E+07" z="0" />
+				</offset>
+				<parts>
+					<part name="part_bg_stars">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environments.cluster_c_stars" />
+									<material id="2" ref="environments.cluster_c_haze" />
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="6.093352E+08" y="5.965725E+08" z="6.093352E+08" />
+							<center x="15.625" y="1.276268E+07" z="0" />
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection04" tags="part  ">
+				<offset>
+					<position x="-0.86E+08" y="200000" z="1.34273100E+08" />
+				</offset>
+				<parts>
+					<part name="part_lavamoon">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environments.cluster_c_icemoon"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.176661E+07" y="1.176661E+07" z="1.176661E+07"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection05" tags="part  ">
+				<offset>
+					<position x="-0.86E+08" y="200000" z="1.34273100E+08" />
+				</offset>
+				<parts>
+					<part name="part_haze_lavamoon">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environments.cluster_c_icemoon_haze"/>
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="1.224904E+07" y="1.224904E+07" z="1.224904E+07"/>
+							<center x="0" y="0" z="0"/>
+						</size>
+					</part>
+				</parts>
+			</connection>
+
+		
+			<connection name="Connection17" tags="part  ">
+				<offset>
+					<position x="-2.515307E+07" y="0.235014E+07" z="3863404" />
+				</offset>
+				<parts>
+					<part name="part_haze_techplanet">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environments.cluster_c_techplanet_haze" />
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="9728537" y="9728536" z="9728537" />
+							<center x="0" y="0" z="-0.2441406" />
+						</size>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection18" tags="part animation textureanimation  ">
+				<offset>
+					<position x="-2.5084710E+07" y="0.235014E+07" z="3863404" />
+				</offset>
+				<animations>
+					<animation name="loop" start="1" end="10000" />
+				</animations>
+				<parts>
+					<part name="anim_techplanet">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="environments.cluster_c_techplanet" />
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="9444817" y="9449863" z="9451230" />
+							<center x="0" y="0" z="0" />
+						</size>
+						<size_raw>
+							<max x="9444817" y="9449861" z="9451230" />
+							<center x="0" y="0" z="-0.2441406" />
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="v_offset" controller="linear_float">
+									<key frame="0" value="0" />
+									<key frame="10000" value="1" />
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+			<connection name="Connection19" tags="part nocollision animation textureanimation  ">
+				<offset>
+					<!-- <position x="-2.5184710E+07" y="0.235014E+07" z="-489557" /> -->
+					<position x="-1.991309E+07" y="0.214105E+07" z="8216365" />
+					<!-- <rotation yaw="90" roll="0" /> -->
+				</offset>
+				<animations>
+					<animation name="loop" start="1" end="2000" />
+				</animations>
+				<parts>
+					<part name="anim_ms_techplanet">
+						<lods>
+							<lod index="0">
+								<materials>
+									<material id="1" ref="effects.masstraffic_lights_02" />
+								</materials>
+							</lod>
+						</lods>
+						<size>
+							<max x="4349940" y="7097208" z="5517963" />
+							<center x="10244.14" y="-105335.9" z="-369919.4" />
+						</size>
+						<size_raw>
+							<max x="4339695" y="7202542" z="5887882" />
+							<center x="10244.14" y="-105335.9" z="-369919.4" />
+						</size_raw>
+						<uv_animations>
+							<uv_animation mapchannel="1">
+								<uv_property name="u_offset" controller="linear_float">
+									<key frame="0" value="-0" />
+									<key frame="1996" value="-1" />
+								</uv_property>
+							</uv_animation>
+						</uv_animations>
+					</part>
+				</parts>
+			</connection>
+
+		</connections>
+	</add>
+
+</diff>
