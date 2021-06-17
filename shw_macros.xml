@@ -106,7 +106,7 @@
     <connections>
       <connection ref="entrypoint">
         <offset>
-          <position x="-2.5084710E+07" y="0.235014E+07" z="-6063404" />
+          <position x="-2.5084710E+07" y="0.235014E+07" z="-6063404" /> <!-- @TODO I might need to change this, as it's currently the same as the exit above -->
         </offset>
       </connection>
       <connection ref="exitpoint">
