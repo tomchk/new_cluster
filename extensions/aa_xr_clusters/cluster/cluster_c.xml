@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <diff>
-	<remove sel="//lights" />
-	<add sel="//layer">
+	<replace sel="//lights">
 		<lights>
 			<omni name="XU Omni01" shadow="0" r="255" g="240" b="240" range="5E+08" shadowrange="5E+08" lighteffect="1" lenseffect="none" trigger="1" intensity="0.4">
 				<lightanimations />
@@ -10,18 +9,18 @@
 				</offset>
 			</omni>
 			<!-- <omni name="XU Omni02" shadow="0" r="170" g="180" b="190" range="5E+08" shadowrange="5E+08" lighteffect="1" trigger="1" intensity="0.3">
-				<lightanimations />
-				<offset>
-					<position x="204109.4" y="-9.3E+07" z="610878" />
-				</offset>
-			</omni> -->
+								<lightanimations />
+								<offset>
+								<position x="204109.4" y="-9.3E+07" z="610878" />
+								</offset>
+								</omni> -->
 			<!-- <ambient name="XU Ambient01" r="130" g="109" b="109" range="1E+07" intensity="0.2">
-				<lightanimations />
-				<offset>
-					<position x="101180" y="-7.4E+07" z="3" />
-					<quaternion qx="0.7071068" qy="-0" qz="-0" qw="-0.7071068" />
-				</offset>
-			</ambient> -->
+								<lightanimations />
+								<offset>
+								<position x="101180" y="-7.4E+07" z="3" />
+								<quaternion qx="0.7071068" qy="-0" qz="-0" qw="-0.7071068" />
+								</offset>
+								</ambient> -->
 			<ambient name="XU Ambient02" r="50" g="55" b="58" range="1E+07" intensity="0.3">
 				<lightanimations />
 				<offset>
@@ -30,10 +29,9 @@
 				</offset>
 			</ambient>
 		</lights>
-	</add>
-
-	<remove sel="//connections" />
-	<add sel="//component">
+	</replace>
+	
+	<replace sel="//connections">
 		<connections>
 			<connection name="container" tags="contents" value="0" optional="0" />
 			<connection name="position" tags="position" value="1" optional="1" />
@@ -121,8 +119,8 @@
 					</part>
 				</parts>
 			</connection>
-
-		
+			
+			
 			<connection name="Connection17" tags="part  ">
 				<offset>
 					<position x="-2.515307E+07" y="0.235014E+07" z="3863404" />
@@ -215,8 +213,8 @@
 					</part>
 				</parts>
 			</connection>
-
+			
 		</connections>
-	</add>
-
+	</replace>
+	
 </diff>

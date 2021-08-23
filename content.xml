@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<content id="new_cluster" name="New Cluster Demonstration" description="Note the required DLCs and mod." author="metame" date="2021-06-07" version="3" save="0">
+<content id="new_cluster" name="New Cluster Demonstration" description="Note the required DLCs and mod." author="metame" date="2021-08-23" version="4" save="0">
   <dependency id="ego_dlc_terran" version="100" optional="false"/>
   <dependency id="ego_dlc_split" version="100" optional="false"/>
   <dependency id="aa_xr_clusters" version="2" optional="false"/>
